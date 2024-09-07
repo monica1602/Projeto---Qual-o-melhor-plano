@@ -5,7 +5,7 @@ O projeto cosiste em analisar os dados da empresa de telecomunicação Megaline.
 O trabalho é analisar o comportamento dos clientes e determinar quais planos pré-pagos dão mais receita. Devemos determinar qual dos dois planos pré-pagos hoje utulziados, Surf e Ultimate, gera mais receita pata atender ao pedido do departamento de marketing de ajuste do orçamento de relações públicas.
 Os dados foram coletados entre 1 de janeito de 2018 a 31 de dezembro de 2018.
 
-## As tarfas são:
+## As tarefas são:
 - Revisar a estrutura dos dataframes
 - Modificar os dataframes conforme necessário: tipos de dados em cada coluna, valores ausentes, valores duplicados
 - Por ter várias tabelas com dados diferentes em cada uma, é necessário unificar todas as informações em uma única tabela que permite fazer mais facilmente os cálculos tendo as informações de cada usuário, de acordo com seu plano, para cada mês que o serviço foi contratado
