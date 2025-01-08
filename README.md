@@ -59,7 +59,27 @@ Há cinco tabelas no conjunto de dados. Abaixo está um dicionário que lista as
 - Math: Biblioteca que permite usar funções matemáticas
 
 ## Imagens
+
+### Comparação do número de minutos de que os usuários de cada plano necessitam a cada mês
 <img src="https://github.com/user-attachments/assets/d53446bb-75d5-4e5c-87ba-f7ba0d7c958d" alt="Projeto 4" width="200"/>
+
+### Diagrama de caixa para visualizar a distribuição da duração mensal das chamadas
+<img src="https://github.com/user-attachments/assets/aaae64ae-4784-4c85-92ef-633b093d539b" alt="Projeto 4" width="200"/>
+
+### Comparação do número de mensagens que os usuários de cada plano tendem a enviar a cada mês
+<img src="https://github.com/user-attachments/assets/24461775-1b78-4e85-9292-589ae112dfb5" alt="Projeto 4" width="200"/>
+
+### Comparação da quantidade de tráfego de internet consumido pelos usuários por plano
+<img src="https://github.com/user-attachments/assets/919333f1-d189-42f8-9486-226ff6911b64" alt="Projeto 4" width="200"/>
+
+### Receita por plano
+<img src="https://github.com/user-attachments/assets/94ca0d5b-850a-4d53-b664-56f93f33c4ea" alt="Projeto 4" width="200"/>
+
+### Hipótese 1
+<img src="https://github.com/user-attachments/assets/3c2c9816-159f-41f9-bb87-166d2b6f1ba9" alt="Projeto 4" width="200"/>
+
+### Hipótese 2 
+<img src="https://github.com/user-attachments/assets/0dfd282a-02fc-4142-994b-7be613754b64" alt="Projeto 4" width="200"/>
 
 ## Resultados
 - É possível perceber que quem utiliza o plano Ultimate dificilmente gasta mais do que está incluso no plano
@@ -75,6 +95,12 @@ Há cinco tabelas no conjunto de dados. Abaixo está um dicionário que lista as
 - Pré-processamento de dados
 - Construção e análise de gráficos
 
+## Contexto real
+- Clientes que desejam entender melhor cada plano
+- Empresas que desejam entender melhor o comportamento dos clientes
+- Novas empresas que desejam lançar novos planos e para isso analisar seus possíveis novos clientes
+- Empresas que desejam oferecer novos planos para seus clientes e desejam mostrar suas vantagens
+  
 ## Como executar o Projeto
 - Clone o repositório
 - Navegue até o diretório do projeto
