@@ -1,9 +1,10 @@
 # Projeto de Análise de Dados Qual o melhor plano?
 
 ## Descrição do Projeto
-O projeto cosiste em analisar os dados da empresa de telecomunicação Megaline. A empresa oferece aos seus clientes dois planos pré-pagos, Surf e Ultimate. O departamento comercial quer saber quais dos planos dão mais receita para ajustar o orçamento de publicidade. Uma primeira análise será realizada em uma pequena seleção de clientes. Terá dados de 500 clientes da Megaline: que clientes são, de onde eles são, qual o plano usam, o número de chamadas que eles fizeram e mensagens que eles enviaram em 2018. 
+O projeto consiste em analisar os dados da empresa de telecomunicação Megaline. A empresa oferece aos seus clientes dois planos pré-pagos, Surf e Ultimate. O departamento comercial quer saber quais dos planos dão mais receita para ajustar o orçamento de publicidade. Uma primeira análise será realizada em uma pequena seleção de clientes. Terá dados de 500 clientes da Megaline: que clientes são, de onde eles são, qual o plano usam, o número de chamadas que eles fizeram e mensagens que eles enviaram em 2018. 
 O trabalho é analisar o comportamento dos clientes e determinar quais planos pré-pagos dão mais receita. Devemos determinar qual dos dois planos pré-pagos hoje utulziados, Surf e Ultimate, gera mais receita pata atender ao pedido do departamento de marketing de ajuste do orçamento de relações públicas.
 Os dados foram coletados entre 1 de janeito de 2018 a 31 de dezembro de 2018.
+Observação: a Megaline arredonda segundos para minutos e megabytes para gigabytes. Para chamadas, cada chamada individual é arredondada para cima, mesmo que uma chamada tenha durado apenas um segundo, um minuto será contado. Para tráfego da web, sessões individuais da web não são arredondadas para cima. Ao invés disso, o total do mês é arredondado para cima. Se alguém usar 1025 megabytes no mês, a cobrança será de 2 gigabytes.
 
 ## As tarefas são:
 - Revisar a estrutura dos dataframes
@@ -13,7 +14,8 @@ Os dados foram coletados entre 1 de janeito de 2018 a 31 de dezembro de 2018.
 - Conferir as hipóteses estabelecidas pela Megaline
   - Hipótese 1: A receita média gerada pelos usuários dos planos Surf e Ultimate é diferente
   - Hipótese 2: Os usuários da região NY-NJ têm uma receita média diferente dos usuários de outras regiões
-
+- É necessário explicar como foi formulado as hipóteses alternativas e nulas e qual critério foi utilizado para testar as hipóteses e por quê
+  
 ## Dicionário de dados
 Há cinco tabelas no conjunto de dados. Abaixo está um dicionário que lista as colunas de cada tabela e descreve os dados contidos nelas.
 - megaline_users.csv: dados sobre usuários
@@ -55,6 +57,9 @@ Há cinco tabelas no conjunto de dados. Abaixo está um dicionário que lista as
 - Matplotlib: Biblioteca para gerar gráficos
 - Numpy: Biblioteca que permite trabakhar com objetos multidimensionais, como matrizes e sequências
 - Math: Biblioteca que permite usar funções matemáticas
+
+## Imagens
+<img src="https://github.com/user-attachments/assets/d53446bb-75d5-4e5c-87ba-f7ba0d7c958d" alt="Projeto 4" width="200"/>
 
 ## Resultados
 - É possível perceber que quem utiliza o plano Ultimate dificilmente gasta mais do que está incluso no plano
