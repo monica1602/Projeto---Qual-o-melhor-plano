@@ -1,20 +1,23 @@
 # Projeto de Análise de Dados Qual o melhor plano?
 
 ## Descrição do Projeto
-O projeto consiste em analisar os dados da empresa de telecomunicação Megaline. A empresa oferece aos seus clientes dois planos pré-pagos, Surf e Ultimate. O departamento comercial quer saber quais dos planos dão mais receita para ajustar o orçamento de publicidade. Uma primeira análise será realizada em uma pequena seleção de clientes. Terá dados de 500 clientes da Megaline: que clientes são, de onde eles são, qual o plano usam, o número de chamadas que eles fizeram e mensagens que eles enviaram em 2018. 
-O trabalho é analisar o comportamento dos clientes e determinar quais planos pré-pagos dão mais receita. Devemos determinar qual dos dois planos pré-pagos hoje utulziados, Surf e Ultimate, gera mais receita pata atender ao pedido do departamento de marketing de ajuste do orçamento de relações públicas.
-Os dados foram coletados entre 1 de janeito de 2018 a 31 de dezembro de 2018.
-Observação: a Megaline arredonda segundos para minutos e megabytes para gigabytes. Para chamadas, cada chamada individual é arredondada para cima, mesmo que uma chamada tenha durado apenas um segundo, um minuto será contado. Para tráfego da web, sessões individuais da web não são arredondadas para cima. Ao invés disso, o total do mês é arredondado para cima. Se alguém usar 1025 megabytes no mês, a cobrança será de 2 gigabytes.
+A empresa de telecomunicações Megaline oferece aos seus clientes dois planos pré-pagos: Surf e Ultimate. O departamento comercial da empresa busca determinar qual dos dois planos gera maior receita, com o objetivo de otimizar o orçamento destinado às estratégias de publicidade e relações públicas. O presente estudo tem como finalidade analisar o comportamento dos clientes e avaliar a receita gerada pelos planos Surf e Ultimate. A análise será realizada a partir de uma amostra de 500 clientes da Megaline, considerando dados sobre suas chamadas telefônicas, mensagens enviadas e uso de tráfego de internet ao longo do ano de 2018.
+Os dados utilizados para esta análise foram coletados no período de 1º de janeiro de 2018 a 31 de dezembro de 2018. A amostra inclui informações sobre a localização dos clientes, o plano contratado e os serviços utilizados. A Megaline adota um sistema específico de arredondamento para cobrança de chamadas e tráfego de internet: para chamadas, cada chamada individual é arredondada para cima, de forma que, mesmo que uma chamada dure apenas um segundo, será contabilizado um minuto completo para efeito de cobrança. No caso do tráfego de internet, o arredondamento ocorre mensalmente sobre o total utilizado. Caso um cliente utilize, por exemplo, 1025 megabytes ao longo do mês, o consumo será arredondado para 2 gigabytes.
+A análise fornecerá insights sobre qual dos planos pré-pagos, Surf ou Ultimate, proporciona maior receita para a Megaline, permitindo que o departamento comercial ajuste suas estratégias de marketing e publicidade de forma mais eficiente.
+
 
 ## As tarefas são:
-- Revisar a estrutura dos dataframes
-- Modificar os dataframes conforme necessário: tipos de dados em cada coluna, valores ausentes, valores duplicados
-- Por ter várias tabelas com dados diferentes em cada uma, é necessário unificar todas as informações em uma única tabela que permite fazer mais facilmente os cálculos tendo as informações de cada usuário, de acordo com seu plano, para cada mês que o serviço foi contratado
-- Fazer uma análise através dos gráficos para observar o comportamento de cada plano
+- Revisar a estrutura dos DataFrames
+- Modificar os DataFrames conforme necessário: tipos de dados em cada coluna, valores ausentes, valores duplicados
+- Unificar as tabelas: consolidar todas as informações em um único DataFrame que permita cálculos mais fáceis, associando os dados de cada usuário ao seu plano para cada mês do serviço contratado
+- Fazer uma análise através dos gráficos: observar o comportamento de cada plano com relação ao uso de chamadas, mensagens e internet
 - Conferir as hipóteses estabelecidas pela Megaline
   - Hipótese 1: A receita média gerada pelos usuários dos planos Surf e Ultimate é diferente
   - Hipótese 2: Os usuários da região NY-NJ têm uma receita média diferente dos usuários de outras regiões
-- É necessário explicar como foi formulado as hipóteses alternativas e nulas e qual critério foi utilizado para testar as hipóteses e por quê
+- Explicar a formulação das hipóteses e os critérios utilizados para os testes
+- Definir hipóteses nula e alternativa
+- Explicar a escolha do teste t para amostras independentes
+- Justificar o nível de significância utilizado e interpretação dos resultados
   
 ## Dicionário de dados
 Há cinco tabelas no conjunto de dados. Abaixo está um dicionário que lista as colunas de cada tabela e descreve os dados contidos nelas.
@@ -52,11 +55,11 @@ Há cinco tabelas no conjunto de dados. Abaixo está um dicionário que lista as
   - 'usd_per_gb': preço por gigabyte extra de dados após exceder o limite do pacote
 
 ## Ferramentas e Bibliotecas utilizadas
-- Python: Linguagem principal utilizada para análise
-- Pandas: Biblioteca para manipulação e análise de dados
-- Matplotlib: Biblioteca para gerar gráficos
-- Numpy: Biblioteca que permite trabakhar com objetos multidimensionais, como matrizes e sequências
-- Math: Biblioteca que permite usar funções matemáticas
+- Python: Linguagem principal utilizada para a análise de dados e implementação dos processos estatísticos.
+- Pandas: Biblioteca essencial para manipulação, limpeza e análise de dados estruturados em formato tabular.
+- Matplotlib: Biblioteca utilizada para a criação de visualizações gráficas, facilitando a interpretação dos dados por meio de gráficos e representações visuais.
+- NumPy: Biblioteca que fornece suporte para operações matemáticas avançadas e manipulação de arrays multidimensionais, como matrizes e sequências numéricas.
+- Math: Biblioteca que disponibiliza funções matemáticas fundamentais, como operações de arredondamento, cálculos trigonométricos e exponenciais, entre outras.
 
 ## Imagens
 
@@ -82,24 +85,24 @@ Há cinco tabelas no conjunto de dados. Abaixo está um dicionário que lista as
 <img src="https://github.com/user-attachments/assets/0dfd282a-02fc-4142-994b-7be613754b64" alt="Projeto 4" width="200"/>
 
 ## Resultados
-- É possível perceber que quem utiliza o plano Ultimate dificilmente gasta mais do que está incluso no plano
-- A maioria dos usuários do plano Surf gasta mais que o incluso no plano, mas não chega a gastar mais o valor fixo do plano Ultimate
-- É possível concluir que a pessoa só deve mudar de plano se o total gasto ultrapassar o valor fixo do outro plano
-- Na hipótese 1 foi realizado um teste de hipótese com alpha de 5%, no qual resultou na informação de que a receita média dos usuários dos planos Surf e Ultimate são diferentes
-- Na hipótese 2 foi confirmada via t-test que há evuidências estatísticas de que a receita média dos usuários da área de NY-NJ difere dos usuários das demais regiões
+- Os usuários do plano Ultimate raramente excedem os benefícios incluídos no plano, indicando que a maioria deles não gera custos adicionais além da mensalidade fixa.
+- A maioria dos usuários do plano Surf ultrapassa a franquia do plano, mas seus gastos adicionais geralmente não chegam ao valor fixo do plano Ultimate.
+- A troca de plano só é vantajosa se o total gasto no plano atual superar o custo fixo do outro plano, sugerindo que os usuários devem avaliar seus padrões de consumo antes de mudar de plano.
+- Hipótese 1: Foi realizado um teste de hipótese com um nível de significância de 5% (α = 0,05), confirmando que há uma diferença estatisticamente significativa entre a receita média dos usuários dos planos Surf e Ultimate.
+- Hipótese 2: O teste t indicou evidências estatísticas de que a receita média dos usuários da região de NY-NJ é significativamente diferente da receita média dos usuários de outras regiões.
 
 ## Aprendizados
-- Análise de dados
-- Qualidade dos dados
-- Tratar os dados modificando tipos de dados, nome das colunas, valores ausentes, valores duplicados
-- Pré-processamento de dados
-- Construção e análise de gráficos
+- Análise exploratória de dados: compreensão inicial do conjunto de dados, identificando padrões, tendências e possíveis inconsistências.
+- Avaliação da qualidade dos dados: verificação da completude, consistência e precisão dos dados para garantir a confiabilidade das análises.
+- Tratamento de dados: ajustes necessários, incluindo a modificação de tipos de dados, padronização dos nomes das colunas, tratamento de valores ausentes e remoção de registros duplicados.
+- Pré-processamento dos dados: preparação e transformação dos dados para análises futuras, garantindo estrutura adequada para modelagem e interpretação.
+- Construção e análise de visualizações gráficas: elaboração de gráficos e representações visuais para facilitar a interpretação dos dados e a identificação de padrões significativos.
 
 ## Contexto real
-- Clientes que desejam entender melhor cada plano
-- Empresas que desejam entender melhor o comportamento dos clientes
-- Novas empresas que desejam lançar novos planos e para isso analisar seus possíveis novos clientes
-- Empresas que desejam oferecer novos planos para seus clientes e desejam mostrar suas vantagens
+- Clientes que buscam compreender melhor as características e benefícios de cada plano: necessitam de uma análise detalhada para tomar decisões informadas sobre qual plano atende melhor às suas necessidades.
+- Empresas que desejam obter insights sobre o comportamento dos clientes: precisam de uma análise aprofundada dos dados dos usuários para entender padrões de consumo e otimizar suas ofertas.
+- Novas empresas que pretendem lançar novos planos e precisam analisar seu público-alvo potencial: requerem uma análise do perfil e comportamento dos consumidores para desenvolver ofertas alinhadas às suas preferências e necessidades.
+- Empresas que desejam oferecer novos planos para seus clientes e evidenciar suas vantagens: necessitam de dados analíticos que permitam destacar os benefícios dos novos planos, ajudando na comunicação das vantagens de forma clara e convincente.
   
 ## Como executar o Projeto
 - Clone o repositório
