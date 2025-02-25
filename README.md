@@ -1,4 +1,4 @@
-# Projeto de Análise de Dados Qual o melhor plano?
+# Projeto de Análise de Dados - Qual o melhor plano?
 
 ## Descrição do Projeto
 A empresa de telecomunicações Megaline oferece aos seus clientes dois planos pré-pagos: Surf e Ultimate. O departamento comercial da empresa busca determinar qual dos dois planos gera maior receita, com o objetivo de otimizar o orçamento destinado às estratégias de publicidade e relações públicas. 
